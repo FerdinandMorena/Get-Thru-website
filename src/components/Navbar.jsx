@@ -33,7 +33,7 @@ export default function Navbar({ onGetStarted }) {
           <div className="flex justify-between items-center py-5">
             <div className="flex items-center gap-2 sm:gap-3">
               <img 
-                src="/src/assets/logo.jpg" 
+                src="/logo.jpg" 
                 alt="Get Thru logo" 
                 className="h-10 sm:h-12 w-auto object-contain"
               />
