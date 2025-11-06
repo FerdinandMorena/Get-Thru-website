@@ -18,7 +18,7 @@ export default function Hero({ onGetStarted }) {
       <Navbar onGetStarted={onGetStarted} />
 
       {/* Hero Section with Background */}
-      <div className="relative overflow-hidden min-h-[calc(100vh-80px)] sm:min-h-screen flex items-center">
+      <div className="relative overflow-hidden min-h-screen flex items-center pt-20">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"

@@ -28,13 +28,13 @@ export default function Navbar({ onGetStarted }) {
 
   return (
     <>
-      <nav className="bg-white/80 backdrop-blur-xl border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+      <nav className="bg-white/95 backdrop-blur-xl border-b border-gray-100 fixed top-0 left-0 right-0 z-50 shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-5">
             <div className="flex items-center gap-2 sm:gap-3">
-              <img 
-                src="/logo.jpg" 
-                alt="Get Thru logo" 
+              <img
+                src="/logo.jpg"
+                alt="Get Thru logo"
                 className="h-10 sm:h-12 w-auto object-contain"
               />
               <h1 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">
