@@ -55,6 +55,8 @@ export default function Testimonials() {
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
+  const [direction, setDirection] = useState(0); // 1 for next, -1 for previous
+  const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
     if (!isAutoPlaying) return;
@@ -69,22 +71,40 @@ export default function Testimonials() {
   }, [isAutoPlaying]);
 
   const goToPrevious = () => {
+    if (isAnimating) return;
     setIsAutoPlaying(false);
-    setCurrentIndex((prevIndex) => 
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
-    );
+    setDirection(-1);
+    setIsAnimating(true);
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) => 
+        prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+      );
+      setIsAnimating(false);
+    }, 300);
   };
 
   const goToNext = () => {
+    if (isAnimating) return;
     setIsAutoPlaying(false);
-    setCurrentIndex((prevIndex) => 
-      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-    );
+    setDirection(1);
+    setIsAnimating(true);
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) => 
+        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+      );
+      setIsAnimating(false);
+    }, 300);
   };
 
   const goToSlide = (index) => {
+    if (isAnimating) return;
     setIsAutoPlaying(false);
-    setCurrentIndex(index);
+    setDirection(index > currentIndex ? 1 : -1);
+    setIsAnimating(true);
+    setTimeout(() => {
+      setCurrentIndex(index);
+      setIsAnimating(false);
+    }, 300);
   };
 
   // Minimum swipe distance (in px)
@@ -181,14 +201,22 @@ export default function Testimonials() {
             onMouseLeave={onMouseLeave}
           >
             {/* Main Testimonial Card */}
-            <div className={`bg-white rounded-xl sm:rounded-2xl shadow-2xl p-5 sm:p-6 md:p-8 lg:p-10 relative overflow-hidden transition-transform duration-300 min-h-[400px] sm:min-h-[380px] md:min-h-[350px] flex flex-col justify-center ${isDragging ? 'cursor-grabbing scale-[0.98]' : 'cursor-grab'}`}>
+            <div className={`bg-white rounded-xl sm:rounded-2xl shadow-2xl p-5 sm:p-6 md:p-8 lg:p-10 relative overflow-hidden min-h-[400px] sm:min-h-[380px] md:min-h-[350px] flex flex-col justify-center transition-all duration-500 ${
+              isDragging ? 'cursor-grabbing scale-[0.98]' : 'cursor-grab'
+            } ${
+              isAnimating 
+                ? direction === 1 
+                  ? 'animate-slideOutLeft' 
+                  : 'animate-slideOutRight'
+                : 'animate-slideIn'
+            }`}>
               {/* Quote Icon */}
               <div className="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 opacity-10 hidden sm:block pointer-events-none">
                 <Quote className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 text-emerald-600" />
               </div>
 
-              {/* Content */}
-              <div className="relative z-10">
+              {/* Content with fade animation */}
+              <div className={`relative z-10 transition-opacity duration-300 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
                 <div className="flex flex-col md:flex-row items-center gap-4 sm:gap-5 md:gap-6 mb-5 sm:mb-6">
                   <img
                     src={testimonials[currentIndex].image}

@@ -465,9 +465,15 @@ export default function Hero({ onGetStarted }) {
                       </svg>
                     </div>
                     <div className="min-w-0 flex-1">
-                      <h4 className="font-bold text-gray-900 mb-1 text-sm sm:text-base">Email</h4>
-                      <p className="text-gray-600 text-xs sm:text-sm break-words">info@getthru.co.za</p>
-                      <p className="text-gray-600 text-xs sm:text-sm break-words">support@getthru.co.za</p>
+                      <h4 className="font-bold text-gray-900 mb-1 text-sm sm:text-base">
+                        Email
+                      </h4>
+                      <p className="text-gray-600 text-xs sm:text-sm break-words">
+                        info@getthru.co.za
+                      </p>
+                      <p className="text-gray-600 text-xs sm:text-sm break-words">
+                        support@getthru.co.za
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3 sm:gap-4">
@@ -493,9 +499,15 @@ export default function Hero({ onGetStarted }) {
                       </svg>
                     </div>
                     <div className="min-w-0 flex-1">
-                      <h4 className="font-bold text-gray-900 mb-1 text-sm sm:text-base">Phone</h4>
-                      <p className="text-gray-600 text-xs sm:text-sm">+27 (0) 11 123 4567</p>
-                      <p className="text-gray-600 text-xs sm:text-sm">+27 (0) 82 987 6543</p>
+                      <h4 className="font-bold text-gray-900 mb-1 text-sm sm:text-base">
+                        Phone
+                      </h4>
+                      <p className="text-gray-600 text-xs sm:text-sm">
+                        +27 (0) 11 123 4567
+                      </p>
+                      <p className="text-gray-600 text-xs sm:text-sm">
+                        +27 (0) 82 987 6543
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3 sm:gap-4">
@@ -527,10 +539,18 @@ export default function Hero({ onGetStarted }) {
                       </svg>
                     </div>
                     <div className="min-w-0 flex-1">
-                      <h4 className="font-bold text-gray-900 mb-1 text-sm sm:text-base">Office</h4>
-                      <p className="text-gray-600 text-xs sm:text-sm">123 Digital Avenue</p>
-                      <p className="text-gray-600 text-xs sm:text-sm">Johannesburg, 2000</p>
-                      <p className="text-gray-600 text-xs sm:text-sm">South Africa</p>
+                      <h4 className="font-bold text-gray-900 mb-1 text-sm sm:text-base">
+                        Office
+                      </h4>
+                      <p className="text-gray-600 text-xs sm:text-sm">
+                        123 Digital Avenue
+                      </p>
+                      <p className="text-gray-600 text-xs sm:text-sm">
+                        Johannesburg, 2000
+                      </p>
+                      <p className="text-gray-600 text-xs sm:text-sm">
+                        South Africa
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -660,20 +680,6 @@ export default function Hero({ onGetStarted }) {
             <button className="px-10 py-5 rounded-xl text-lg font-semibold text-white border-2 border-white/20 hover:bg-white/10 hover:border-white/40 transition-all duration-300 backdrop-blur-sm">
               Learn More
             </button>
-          </div>
-          <div className="mt-12 flex flex-wrap justify-center gap-8 text-gray-400">
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-emerald-400" />
-              <span>No credit card required</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-emerald-400" />
-              <span>Free trial available</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-emerald-400" />
-              <span>Cancel anytime</span>
-            </div>
           </div>
         </div>
       </div>

@@ -83,8 +83,8 @@ export default function AuthModal({ isOpen, onClose, initialMode = "login" }) {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 px-0 sm:p-4 py-0 sm:py-4 overflow-y-auto">
-      <div className="bg-white rounded-none sm:rounded-3xl shadow-2xl max-w-md w-full relative animate-fadeIn my-0 sm:my-8 min-h-screen sm:min-h-0 max-h-screen sm:max-h-[calc(100vh-4rem)] flex flex-col">
+    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-3 sm:p-4 overflow-y-auto">
+      <div className="bg-white rounded-2xl sm:rounded-3xl shadow-2xl max-w-md w-full relative animate-fadeIn my-4 sm:my-8 max-h-[calc(100vh-2rem)] sm:max-h-[calc(100vh-4rem)] flex flex-col">
         <button
           onClick={onClose}
           className="absolute top-3 right-3 sm:top-4 sm:right-4 text-gray-400 hover:text-white hover:bg-gradient-to-r hover:from-emerald-600 hover:to-blue-600 p-1.5 sm:p-2 rounded-lg sm:rounded-xl transition-all duration-300 z-10"
@@ -107,31 +107,33 @@ export default function AuthModal({ isOpen, onClose, initialMode = "login" }) {
           {error && (
             <div className="mb-3 sm:mb-4 p-2.5 sm:p-3 bg-red-50 border-2 border-red-200 rounded-xl sm:rounded-2xl flex items-start gap-2 sm:gap-3">
               <AlertCircle className="w-4 h-4 sm:w-5 sm:h-5 text-red-600 flex-shrink-0 mt-0.5" />
-              <p className="text-red-800 text-xs sm:text-sm font-medium">{error}</p>
+              <p className="text-red-800 text-xs sm:text-sm font-medium">
+                {error}
+              </p>
             </div>
           )}
 
           <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
             {mode === "register" && (
               <div>
-                <label className="block text-xs sm:text-sm font-bold text-gray-700 mb-1 sm:mb-1.5">
+                <label className="block text-sm font-bold text-gray-700 mb-1.5">
                   Full Name
                 </label>
                 <div className="relative">
                   <div
-                    className="absolute left-2.5 sm:left-3 top-1/2 transform -translate-y-1/2 w-8 h-8 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl flex items-center justify-center"
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-xl flex items-center justify-center"
                     style={{
                       background:
                         "linear-gradient(135deg, #10b981 0%, #3b82f6 100%)",
                     }}
                   >
-                    <User className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-white" />
+                    <User className="w-5 h-5 text-white" />
                   </div>
                   <input
                     type="text"
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
-                    className="w-full pl-12 sm:pl-13 pr-3 sm:pr-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all font-medium text-sm sm:text-base"
+                    className="w-full pl-16 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all font-medium text-sm sm:text-base"
                     placeholder="Enter your full name"
                     required
                   />
@@ -140,24 +142,24 @@ export default function AuthModal({ isOpen, onClose, initialMode = "login" }) {
             )}
 
             <div>
-              <label className="block text-xs sm:text-sm font-bold text-gray-700 mb-1 sm:mb-1.5">
+              <label className="block text-sm font-bold text-gray-700 mb-1.5">
                 Email Address
               </label>
               <div className="relative">
                 <div
-                  className="absolute left-2.5 sm:left-3 top-1/2 transform -translate-y-1/2 w-8 h-8 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl flex items-center justify-center"
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-xl flex items-center justify-center"
                   style={{
                     background:
                       "linear-gradient(135deg, #10b981 0%, #3b82f6 100%)",
                   }}
                 >
-                  <Mail className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-white" />
+                  <Mail className="w-5 h-5 text-white" />
                 </div>
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full pl-12 sm:pl-13 pr-3 sm:pr-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all font-medium text-sm sm:text-base"
+                  className="w-full pl-16 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all font-medium text-sm sm:text-base"
                   placeholder="Enter your email"
                   required
                 />
@@ -165,24 +167,24 @@ export default function AuthModal({ isOpen, onClose, initialMode = "login" }) {
             </div>
 
             <div>
-              <label className="block text-xs sm:text-sm font-bold text-gray-700 mb-1 sm:mb-1.5">
+              <label className="block text-sm font-bold text-gray-700 mb-1.5">
                 Password
               </label>
               <div className="relative">
                 <div
-                  className="absolute left-2.5 sm:left-3 top-1/2 transform -translate-y-1/2 w-8 h-8 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl flex items-center justify-center"
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-xl flex items-center justify-center"
                   style={{
                     background:
                       "linear-gradient(135deg, #10b981 0%, #3b82f6 100%)",
                   }}
                 >
-                  <Lock className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-white" />
+                  <Lock className="w-5 h-5 text-white" />
                 </div>
                 <input
                   type={showPassword ? "text" : "password"}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full pl-12 sm:pl-13 pr-10 sm:pr-12 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all font-medium text-sm sm:text-base"
+                  className="w-full pl-16 pr-12 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all font-medium text-sm sm:text-base"
                   placeholder="Enter your password"
                   required
                   minLength={6}
@@ -190,12 +192,12 @@ export default function AuthModal({ isOpen, onClose, initialMode = "login" }) {
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors p-1"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
                 >
                   {showPassword ? (
-                    <EyeOff className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <EyeOff className="w-5 h-5" />
                   ) : (
-                    <Eye className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <Eye className="w-5 h-5" />
                   )}
                 </button>
               </div>
@@ -203,24 +205,24 @@ export default function AuthModal({ isOpen, onClose, initialMode = "login" }) {
 
             {mode === "register" && (
               <div>
-                <label className="block text-xs sm:text-sm font-bold text-gray-700 mb-1 sm:mb-1.5">
+                <label className="block text-sm font-bold text-gray-700 mb-1.5">
                   Confirm Password
                 </label>
                 <div className="relative">
                   <div
-                    className="absolute left-2.5 sm:left-3 top-1/2 transform -translate-y-1/2 w-8 h-8 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl flex items-center justify-center"
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-xl flex items-center justify-center"
                     style={{
                       background:
                         "linear-gradient(135deg, #10b981 0%, #3b82f6 100%)",
                     }}
                   >
-                    <Lock className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-white" />
+                    <Lock className="w-5 h-5 text-white" />
                   </div>
                   <input
                     type={showConfirmPassword ? "text" : "password"}
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
-                    className="w-full pl-12 sm:pl-13 pr-10 sm:pr-12 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all font-medium text-sm sm:text-base"
+                    className="w-full pl-16 pr-12 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all font-medium text-sm sm:text-base"
                     placeholder="Confirm your password"
                     required
                     minLength={6}
@@ -228,12 +230,12 @@ export default function AuthModal({ isOpen, onClose, initialMode = "login" }) {
                   <button
                     type="button"
                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                    className="absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors p-1"
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
                   >
                     {showConfirmPassword ? (
-                      <EyeOff className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <EyeOff className="w-5 h-5" />
                     ) : (
-                      <Eye className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <Eye className="w-5 h-5" />
                     )}
                   </button>
                 </div>
