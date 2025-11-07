@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
-import { X } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { X, LogIn } from "lucide-react";
 
 export default function Navbar({ onGetStarted }) {
+  const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -76,14 +78,21 @@ export default function Navbar({ onGetStarted }) {
                 Contact
               </button>
               <button
-                onClick={onGetStarted}
-                className="ml-4 text-white px-6 py-2.5 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform"
-                style={{
-                  background:
-                    "linear-gradient(135deg, #10b981 0%, #3b82f6 100%)",
-                }}
+              onClick={() => navigate("/login")}
+              className="ml-4 px-5 py-2.5 rounded-xl font-semibold transition-all duration-300 border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-50 hover:scale-105 transform flex items-center gap-2"
               >
-                Get Started
+              <LogIn className="w-4 h-4" />
+              Login
+              </button>
+              <button
+              onClick={onGetStarted}
+              className="ml-4 text-white px-6 py-2.5 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform"
+              style={{
+              background:
+              "linear-gradient(135deg, #10b981 0%, #3b82f6 100%)",
+              }}
+              >
+              Get Started
               </button>
             </div>
             <div className="md:hidden">
@@ -204,7 +213,17 @@ export default function Navbar({ onGetStarted }) {
           </div>
 
           {/* Sidebar Footer */}
-          <div className="p-6 bg-white/50 backdrop-blur-sm">
+          <div className="p-6 bg-white/50 backdrop-blur-sm space-y-3">
+            <button
+              onClick={() => {
+                navigate("/login");
+                closeMobileMenu();
+              }}
+              className="w-full px-6 py-4 rounded-2xl font-bold text-lg transition-all duration-300 border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-50 hover:scale-105 transform flex items-center justify-center gap-2"
+            >
+              <LogIn className="w-5 h-5" />
+              Login
+            </button>
             <button
               onClick={() => {
                 onGetStarted();
@@ -217,7 +236,7 @@ export default function Navbar({ onGetStarted }) {
             >
               Get Started
             </button>
-            <p className="text-center text-sm text-gray-600 mt-4 font-medium">
+            <p className="text-center text-sm text-gray-600 mt-2 font-medium">
               Join 10K+ connected users
             </p>
           </div>

@@ -1,22 +1,12 @@
-import { useState } from 'react';
-import Hero from '../components/Hero';
-import AuthModal from '../components/AuthModal';
+import { useNavigate } from "react-router-dom";
+import Home from "../components/Home";
 
 export default function LandingPage() {
-  const [showAuthModal, setShowAuthModal] = useState(false);
+  const navigate = useNavigate();
 
   const handleGetStarted = () => {
-    setShowAuthModal(true);
+    navigate("/register");
   };
 
-  const handleCloseModal = () => {
-    setShowAuthModal(false);
-  };
-
-  return (
-    <>
-      <Hero onGetStarted={handleGetStarted} />
-      <AuthModal isOpen={showAuthModal} onClose={handleCloseModal} />
-    </>
-  );
+  return <Home onGetStarted={handleGetStarted} />;
 }
