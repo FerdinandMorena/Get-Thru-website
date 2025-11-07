@@ -61,8 +61,8 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-blue-50 flex items-center justify-center px-4 ">
-      <div className="bg-white rounded-3xl shadow-2xl max-w-md w-full p-8 relative">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-blue-50 flex items-center justify-center px-0 sm:px-4 py-0 sm:py-8">
+      <div className="bg-white rounded-none sm:rounded-3xl shadow-none sm:shadow-2xl max-w-md w-full p-6 sm:p-8 relative min-h-screen sm:min-h-0">
         <Link
           to="/"
           className="absolute top-6 left-6 text-gray-400 hover:text-emerald-600 transition-colors flex items-center gap-2 font-medium"
@@ -106,19 +106,19 @@ export default function Login() {
               </label>
               <div className="relative">
                 <div
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-xl flex items-center justify-center"
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 w-8 h-8 rounded-lg flex items-center justify-center"
                   style={{
                     background:
                       "linear-gradient(135deg, #10b981 0%, #3b82f6 100%)",
                   }}
                 >
-                  <Mail className="w-5 h-5 text-white" />
+                  <Mail className="w-4 h-4 text-white" />
                 </div>
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full pl-16 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all font-medium"
+                  className="w-full pl-14 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all font-medium"
                   placeholder="Enter your email"
                   required
                 />
@@ -131,19 +131,19 @@ export default function Login() {
               </label>
               <div className="relative">
                 <div
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-xl flex items-center justify-center"
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 w-8 h-8 rounded-lg flex items-center justify-center"
                   style={{
                     background:
                       "linear-gradient(135deg, #10b981 0%, #3b82f6 100%)",
                   }}
                 >
-                  <Lock className="w-5 h-5 text-white" />
+                  <Lock className="w-4 h-4 text-white" />
                 </div>
                 <input
                   type={showPassword ? "text" : "password"}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full pl-16 pr-12 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all font-medium"
+                  className="w-full pl-14 pr-12 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all font-medium"
                   placeholder="Enter your password"
                   required
                   minLength={6}
