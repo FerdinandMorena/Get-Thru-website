@@ -77,7 +77,7 @@ export default function Navbar({ onGetStarted }) {
               >
                 Contact
               </button>
-              <button
+              {/* <button
               onClick={() => navigate("/login")}
               className="ml-4 px-5 py-2.5 rounded-xl font-semibold transition-all duration-300 border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-50 hover:scale-105 transform flex items-center gap-2"
               >
@@ -93,7 +93,7 @@ export default function Navbar({ onGetStarted }) {
               }}
               >
               Get Started
-              </button>
+              </button> */}
             </div>
             <div className="md:hidden">
               <button
@@ -213,7 +213,7 @@ export default function Navbar({ onGetStarted }) {
           </div>
 
           {/* Sidebar Footer */}
-          <div className="p-6 bg-white/50 backdrop-blur-sm space-y-3">
+          {/* <div className="p-6 bg-white/50 backdrop-blur-sm space-y-3">
             <button
               onClick={() => {
                 navigate("/login");
@@ -239,7 +239,7 @@ export default function Navbar({ onGetStarted }) {
             <p className="text-center text-sm text-gray-600 mt-2 font-medium">
               Join 10K+ connected users
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
