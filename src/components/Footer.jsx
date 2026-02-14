@@ -203,7 +203,13 @@ export default function Footer() {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <span>Mpumalanga, South Africa</span>
+                <span>
+                  Stand No: 205 Top Center,
+                  <br />
+                  Tjakastard, Nhlazatje,
+                  <br />
+                  Mpumalanga, 1193
+                </span>
               </li>
             </ul>
           </div>

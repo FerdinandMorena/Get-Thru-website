@@ -247,8 +247,10 @@ export default function Home({ onGetStarted }) {
                     Skills Training
                   </p>
                   <p className="text-gray-500 mb-6 text-sm flex items-center justify-center gap-2">
-                    <MapPin className="w-4 h-4 text-emerald-600" />
-                    Mpumalanga, South Africa
+                    <MapPin className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                    <span className="text-center">
+                      Stand No: 205 Top Center, Tjakastard, Nhlazatje, Mpumalanga, 1193
+                    </span>
                   </p>
                   <button
                     onClick={onGetStarted}
@@ -698,13 +700,13 @@ export default function Home({ onGetStarted }) {
                         Office
                       </h4>
                       <p className="text-gray-600 text-xs sm:text-sm">
-                        123 Digital Avenue
+                        Stand No: 205 Top Center
                       </p>
                       <p className="text-gray-600 text-xs sm:text-sm">
-                        Johannesburg, 2000
+                        Tjakastard, Nhlazatje,
                       </p>
                       <p className="text-gray-600 text-xs sm:text-sm">
-                        South Africa
+                        Mpumalanga, 1193
                       </p>
                     </div>
                   </div>
