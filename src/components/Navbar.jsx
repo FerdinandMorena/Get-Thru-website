@@ -48,6 +48,17 @@ export default function Navbar({ onGetStarted }) {
                 onClick={(e) => {
                   e.preventDefault();
                   document
+                    .getElementById("training")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="px-4 py-2 text-gray-700 hover:text-emerald-600 font-medium transition-colors rounded-lg hover:bg-emerald-50"
+              >
+                Digital Skills
+              </button>
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
                     .getElementById("about")
                     ?.scrollIntoView({ behavior: "smooth" });
                 }}
@@ -83,17 +94,17 @@ export default function Navbar({ onGetStarted }) {
               >
               <LogIn className="w-4 h-4" />
               Login
-              </button>
-              <button
-              onClick={onGetStarted}
-              className="ml-4 text-white px-6 py-2.5 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform"
-              style={{
-              background:
-              "linear-gradient(135deg, #10b981 0%, #3b82f6 100%)",
-              }}
-              >
-              Get Started
               </button> */}
+              <button
+                onClick={onGetStarted}
+                className="ml-4 text-white px-6 py-2.5 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform"
+                style={{
+                  background:
+                    "linear-gradient(135deg, #10b981 0%, #3b82f6 100%)",
+                }}
+              >
+                Get Started
+              </button>
             </div>
             <div className="md:hidden">
               <button
@@ -159,6 +170,24 @@ export default function Navbar({ onGetStarted }) {
                 onClick={(e) => {
                   e.preventDefault();
                   document
+                    .getElementById("training")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                  closeMobileMenu();
+                }}
+                className="group relative px-5 py-4 text-gray-700 hover:text-white font-semibold text-lg transition-all duration-300 rounded-2xl hover:bg-gradient-to-r hover:from-emerald-600 hover:to-blue-600 hover:shadow-xl transform hover:scale-105 hover:-translate-x-1 cursor-pointer overflow-hidden text-left"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative flex items-center gap-3">
+                  <span className="w-2 h-2 rounded-full bg-emerald-600 group-hover:bg-white transition-all duration-300 group-hover:scale-150"></span>
+                  <span className="group-hover:translate-x-1 transition-transform duration-300">
+                    Digital Skills
+                  </span>
+                </div>
+              </button>
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
                     .getElementById("about")
                     ?.scrollIntoView({ behavior: "smooth" });
                   closeMobileMenu();
@@ -213,8 +242,8 @@ export default function Navbar({ onGetStarted }) {
           </div>
 
           {/* Sidebar Footer */}
-          {/* <div className="p-6 bg-white/50 backdrop-blur-sm space-y-3">
-            <button
+          <div className="p-6 bg-white/50 backdrop-blur-sm space-y-3">
+            {/* <button
               onClick={() => {
                 navigate("/login");
                 closeMobileMenu();
@@ -223,7 +252,7 @@ export default function Navbar({ onGetStarted }) {
             >
               <LogIn className="w-5 h-5" />
               Login
-            </button>
+            </button> */}
             <button
               onClick={() => {
                 onGetStarted();
@@ -239,7 +268,7 @@ export default function Navbar({ onGetStarted }) {
             <p className="text-center text-sm text-gray-600 mt-2 font-medium">
               Join 10K+ connected users
             </p>
-          </div> */}
+          </div>
         </div>
       </div>
     </>
