@@ -226,7 +226,7 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              &copy; {date.getFullYear()} GetThru. All rights reserved.
+              &copy; {new Date().getFullYear()} GetThru. All rights reserved.
               Empowering South Africa through digital connectivity.
             </p>
             <div className="flex gap-6 text-sm text-gray-400">
