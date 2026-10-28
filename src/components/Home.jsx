@@ -506,7 +506,7 @@ export default function Home({ onGetStarted }) {
                         WhatsApp
                       </h4>
                       <a
-                        href="https://wa.me/27630270385"
+                        href="https://wa.me/27706528395"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-emerald-600 hover:text-emerald-700 text-xs sm:text-sm font-medium flex items-center gap-1"

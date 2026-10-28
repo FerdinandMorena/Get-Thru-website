@@ -28,7 +28,10 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61564457184738"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GetThru on Facebook"
                 className="w-10 h-10 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center text-gray-400 hover:text-emerald-400 transition-all duration-300 border border-white/10"
               >
                 <svg
@@ -40,7 +43,10 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.tiktok.com/@get_thru"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GetThru on TikTok"
                 className="w-10 h-10 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center text-gray-400 hover:text-emerald-400 transition-all duration-300 border border-white/10"
               >
                 <svg
@@ -48,11 +54,14 @@ export default function Footer() {
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                  <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.09 2.69 1.59 4.21 1.75v4.03c-1.42-.05-2.85-.34-4.1-.96-.55-.25-1.05-.57-1.55-.9-.01 2.77.01 5.54-.02 8.31-.07 1.33-.51 2.66-1.29 3.75-1.26 1.78-3.45 2.94-5.64 2.98-1.34.08-2.68-.29-3.82-1-1.89-1.18-3.19-3.34-3.24-5.58-.08-1.4.3-2.8 1.05-3.98 1.21-1.94 3.38-3.22 5.66-3.28.13-.01.27-.01.4 0v4.17c-.9-.3-1.95-.22-2.73.32-.57.37-1.01.95-1.2 1.61-.16.39-.11.8-.1 1.21.21 1.43 1.59 2.63 3.06 2.5.98-.01 1.92-.58 2.43-1.42.17-.3.36-.61.37-.96.09-1.6.05-3.2.06-4.8V.02z" />
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/get__thru/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GetThru on Instagram"
                 className="w-10 h-10 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center text-gray-400 hover:text-emerald-400 transition-all duration-300 border border-white/10"
               >
                 <svg
@@ -64,7 +73,10 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/get-thru-digital/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GetThru on LinkedIn"
                 className="w-10 h-10 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center text-gray-400 hover:text-emerald-400 transition-all duration-300 border border-white/10"
               >
                 <svg
