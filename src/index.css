@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply min-w-[320px] bg-white font-sans antialiased text-slate-800;
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+}
+
 @layer utilities {
   /* Testimonial slide animations */
   @keyframes slideIn {
