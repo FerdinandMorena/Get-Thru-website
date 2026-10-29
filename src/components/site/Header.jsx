@@ -20,8 +20,7 @@ export default function Header({ page, navigate }) {
             empowered.
           </span>
           <span>
-            WhatsApp / Phone{" "}
-            <b className="text-emerald-300">070 652 8395</b> ·{" "}
+            WhatsApp / Phone <b className="text-emerald-300">070 652 8395</b> ·{" "}
             <a className="hover:underline" href="mailto:info@getthru.co.za">
               info@getthru.co.za
             </a>
@@ -43,10 +42,12 @@ export default function Header({ page, navigate }) {
             type="button"
           >
             <span aria-hidden="true">{menuOpen ? "×" : "☰"}</span>
-            <span>{menuOpen ? "CLOSE" : "MENU"}</span>
           </button>
 
-          <div className="hidden items-center gap-1 md:flex" id="desktop-navigation">
+          <div
+            className="hidden items-center gap-1 md:flex"
+            id="desktop-navigation"
+          >
             {navigation.map(([id, label]) => (
               <a
                 aria-current={page === id ? "page" : undefined}
