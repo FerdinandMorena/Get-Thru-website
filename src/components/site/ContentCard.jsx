@@ -1,7 +1,7 @@
 export default function ContentCard({ icon, accent = false, children, className = "" }) {
   return (
     <article
-      className={`flex min-w-0 flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_10px_28px_rgba(16,42,67,0.06)] transition duration-200 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_18px_36px_rgba(16,42,67,0.10)] ${className}`}
+      className={`site-card flex min-w-0 flex-col rounded-2xl p-6 ${className}`}
     >
       <div
         aria-hidden="true"

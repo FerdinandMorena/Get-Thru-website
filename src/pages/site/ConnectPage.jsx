@@ -9,14 +9,22 @@ const offers = [
     name: "Basic",
     price: "R430",
     speed: "10/5 Mbps",
-    details: ["Browsing and messaging", "Essential online tasks", "Unlimited data as advertised"],
+    details: [
+      "Browsing and messaging",
+      "Essential online tasks",
+      "Unlimited data as advertised",
+    ],
   },
   {
     label: "Popular choice",
     name: "Standard",
     price: "R550",
     speed: "20/10 Mbps",
-    details: ["Study, work and streaming", "Regular household use", "Unlimited data as advertised"],
+    details: [
+      "Study, work and streaming",
+      "Regular household use",
+      "Unlimited data as advertised",
+    ],
     featured: true,
   },
   {
@@ -24,24 +32,68 @@ const offers = [
     name: "Premium",
     price: "R720",
     speed: "40/20 Mbps",
-    details: ["Busy households", "More connected devices", "Unlimited data as advertised"],
+    details: [
+      "Busy households",
+      "More connected devices",
+      "Unlimited data as advertised",
+    ],
   },
   {
     label: "Higher tier",
     name: "Ultimate",
     price: "R890+",
     speed: "50+ Mbps",
-    details: ["Higher-speed usage needs", "Demanding online activities", "Unlimited data as advertised"],
+    details: [
+      "Higher-speed usage needs",
+      "Demanding online activities",
+      "Unlimited data as advertised",
+    ],
   },
 ];
 
 const communityServices = [
-  ["⌁", "Community connectivity", "Explore public Wi-Fi, hotspot access and connectivity options designed to help underserved communities get online.", "Ask about community access →", "contact"],
-  ["⌂", "Smart community hubs", "Enquire about community-based access points that can support digital learning, information access and local services.", "Discuss a community hub →", "contact"],
-  ["▤", "Digital skills and inclusion", "Connect residents to practical digital skills pathways that support confident, safer participation online.", "Explore learning →", "learn-grow"],
-  ["◎", "Local enterprise enablement", "Explore digital tools and support for small businesses, cooperatives and community entrepreneurs.", "Business solutions →", "business"],
-  ["▦", "Digital community services", "Discuss digital platforms that may help communities access information, engage with services and improve communication.", "Make an enquiry →", "contact"],
-  ["↗", "Partnerships and deployment", "Municipalities, community organisations and implementation partners can contact us to discuss a potential collaboration.", "Explore partnership →", "contact"],
+  [
+    "⌁",
+    "Community connectivity",
+    "Explore public Wi-Fi, hotspot access and connectivity options designed to help underserved communities get online.",
+    "Ask about community access →",
+    "contact",
+  ],
+  [
+    "⌂",
+    "Smart community hubs",
+    "Enquire about community-based access points that can support digital learning, information access and local services.",
+    "Discuss a community hub →",
+    "contact",
+  ],
+  [
+    "▤",
+    "Digital skills and inclusion",
+    "Connect residents to practical digital skills pathways that support confident, safer participation online.",
+    "Explore learning →",
+    "learn-grow",
+  ],
+  [
+    "◎",
+    "Local enterprise enablement",
+    "Explore digital tools and support for small businesses, cooperatives and community entrepreneurs.",
+    "Business solutions →",
+    "business",
+  ],
+  [
+    "▦",
+    "Digital community services",
+    "Discuss digital platforms that may help communities access information, engage with services and improve communication.",
+    "Make an enquiry →",
+    "contact",
+  ],
+  [
+    "↗",
+    "Partnerships and deployment",
+    "Municipalities, community organisations and implementation partners can contact us to discuss a potential collaboration.",
+    "Explore partnership →",
+    "contact",
+  ],
 ];
 
 export default function ConnectPage({ navigate, onSelectPackage }) {
@@ -56,9 +108,16 @@ export default function ConnectPage({ navigate, onSelectPackage }) {
         description="Compare the currently advertised packages, then check coverage before placing an order. Availability and final installation arrangements are confirmed by our team."
         eyebrow="01 · Connect"
         navigate={navigate}
-        title={<>Home internet that helps<br /><em className="not-italic text-blue-700">you do more online.</em></>}
+        visual="connect"
+        title={
+          <>
+            Home internet that helps
+            <br />
+            <em className="not-italic text-blue-700">you do more online.</em>
+          </>
+        }
       />
-      <section className="py-14 sm:py-16 lg:py-20">
+      <section className="site-grid-bg py-14 sm:py-16 lg:py-20">
         <div className="mx-auto w-full max-w-7xl px-5 sm:px-7 lg:px-8">
           <div className="mb-8 max-w-3xl">
             <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -73,10 +132,10 @@ export default function ConnectPage({ navigate, onSelectPackage }) {
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
             {offers.map((offer) => (
               <article
-                className={`relative flex flex-col rounded-2xl border bg-white p-6 shadow-sm ${
+                className={`site-card relative flex flex-col rounded-2xl p-6 ${
                   offer.featured
-                    ? "border-2 border-emerald-600 shadow-lg shadow-emerald-900/10"
-                    : "border-slate-200"
+                    ? "site-card-featured shadow-lg shadow-emerald-900/10"
+                    : ""
                 }`}
                 key={offer.name}
               >
@@ -88,13 +147,22 @@ export default function ConnectPage({ navigate, onSelectPackage }) {
                 <span className="mb-3 inline-flex w-fit rounded-full bg-emerald-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide text-emerald-900">
                   {offer.label}
                 </span>
-                <h3 className="text-xl font-extrabold text-slate-900">{offer.name}</h3>
+                <h3 className="text-xl font-extrabold text-slate-900">
+                  {offer.name}
+                </h3>
                 <div className="mt-3 text-3xl font-extrabold text-slate-900">
-                  {offer.price} <span className="text-xs font-semibold text-slate-600">/ month</span>
+                  {offer.price}{" "}
+                  <span className="text-xs font-semibold text-slate-600">
+                    / month
+                  </span>
                 </div>
-                <div className="mt-1 text-base font-extrabold text-blue-700">{offer.speed}</div>
+                <div className="mt-1 text-base font-extrabold text-blue-700">
+                  {offer.speed}
+                </div>
                 <ul className="my-5 flex-1 space-y-2 border-t border-slate-100 pt-4 text-sm leading-6 text-slate-600">
-                  {offer.details.map((item) => <li key={item}>• {item}</li>)}
+                  {offer.details.map((item) => (
+                    <li key={item}>• {item}</li>
+                  ))}
                 </ul>
                 <ButtonLink
                   className="w-full"
@@ -105,20 +173,16 @@ export default function ConnectPage({ navigate, onSelectPackage }) {
                   to="order"
                   variant={offer.featured ? "primary" : "outline"}
                 >
-                  {offer.name === "Ultimate" ? "Enquire" : `Choose ${offer.name}`}
+                  {offer.name === "Ultimate"
+                    ? "Enquire"
+                    : `Choose ${offer.name}`}
                 </ButtonLink>
               </article>
             ))}
           </div>
-          <div className="mt-6 rounded-r-xl border border-emerald-200 border-l-4 border-l-emerald-700 bg-emerald-50/70 p-4 text-sm leading-6 text-slate-700">
-            <b className="text-slate-900">Installation:</b> The current printed
-            offer lists a once-off installation fee of R1,500. A 50% deposit
-            has also appeared in marketing material. Confirm current terms
-            before publishing these as final.
-          </div>
         </div>
       </section>
-      <section className="bg-gradient-to-br from-slate-50 to-blue-50/60 py-14 sm:py-16 lg:py-20">
+      <section className="site-grid-bg py-14 sm:py-16 lg:py-20">
         <div className="mx-auto w-full max-w-7xl px-5 sm:px-7 lg:px-8">
           <div className="mb-8 max-w-3xl">
             <div className="text-xs font-extrabold uppercase tracking-widest text-blue-700">
@@ -138,7 +202,9 @@ export default function ConnectPage({ navigate, onSelectPackage }) {
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
             {communityServices.map(([icon, title, copy, link, to], index) => (
               <ContentCard accent={index % 2 === 1} icon={icon} key={title}>
-                <h3 className="mb-2 text-lg font-extrabold text-slate-900">{title}</h3>
+                <h3 className="mb-2 text-lg font-extrabold text-slate-900">
+                  {title}
+                </h3>
                 <p className="mb-4 text-sm leading-6 text-slate-600">{copy}</p>
                 <a
                   className="mt-auto text-sm font-extrabold text-blue-700 hover:underline"

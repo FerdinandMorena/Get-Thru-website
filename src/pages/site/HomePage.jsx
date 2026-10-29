@@ -20,6 +20,10 @@ export default function HomePage({ navigate }) {
             "linear-gradient(115deg, rgba(6,78,59,.92) 0%, rgba(21,62,117,.91) 58%, rgba(23,37,84,.91) 100%), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')",
         }}
       >
+        <div
+          aria-hidden="true"
+          className="site-home-hero-grid pointer-events-none absolute inset-0 -z-10 opacity-30"
+        />
         <div className="pointer-events-none absolute -right-36 -top-36 -z-10 h-96 w-96 rounded-full bg-emerald-400/20 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-40 -left-32 -z-10 h-96 w-96 rounded-full bg-blue-400/20 blur-3xl" />
         <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-5 sm:px-7 lg:grid-cols-[1.08fr_.92fr] lg:gap-16 lg:px-8">
@@ -96,7 +100,7 @@ export default function HomePage({ navigate }) {
         </div>
       </section>
 
-      <section className="py-16 sm:py-20 lg:py-24">
+      <section className="site-grid-bg py-16 sm:py-20 lg:py-24">
         <div className="mx-auto w-full max-w-7xl px-5 sm:px-7 lg:px-8">
           <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-12">
             <Eyebrow>How Get Thru helps</Eyebrow>
@@ -171,7 +175,7 @@ export default function HomePage({ navigate }) {
         </div>
       </section>
 
-      <section className="bg-gradient-to-br from-slate-50 to-blue-50/70 py-16 sm:py-20 lg:py-24">
+      <section className="site-grid-bg py-16 sm:py-20 lg:py-24">
         <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-start gap-9 px-5 sm:px-7 lg:grid-cols-2 lg:gap-14 lg:px-8">
           <div>
             <Eyebrow>A simple customer journey</Eyebrow>
@@ -195,7 +199,7 @@ export default function HomePage({ navigate }) {
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {journeySteps.map(([label, title, copy]) => (
               <article
-                className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
+                className="site-card rounded-2xl p-5"
                 key={label}
               >
                 <b className="text-xs font-extrabold tracking-wide text-emerald-800">
@@ -211,7 +215,7 @@ export default function HomePage({ navigate }) {
         </div>
       </section>
 
-      <section className="py-16 sm:py-20">
+      <section className="site-grid-bg py-16 sm:py-20">
         <div className="mx-auto w-full max-w-7xl px-5 sm:px-7 lg:px-8">
           <div className="flex flex-col items-start justify-between gap-6 rounded-3xl bg-gradient-to-r from-emerald-800 to-blue-700 p-7 text-white shadow-xl shadow-blue-900/15 sm:flex-row sm:items-center sm:p-10">
             <div>

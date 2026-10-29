@@ -45,9 +45,10 @@ export default function OrderPage({ selectedPackage }) {
         crumb="Home / Order internet"
         description="Tell us which package you are interested in and where service is needed. The order is not confirmed until Get Thru verifies coverage and confirms terms."
         eyebrow="Start your order"
+        visual="order"
         title={<>One step closer to<br /><em className="not-italic text-blue-700">getting connected.</em></>}
       />
-      <section className="py-14 sm:py-16 lg:py-20">
+      <section className="site-grid-bg py-14 sm:py-16 lg:py-20">
         <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-start gap-8 px-5 sm:px-7 lg:grid-cols-[.85fr_1.15fr] lg:gap-14 lg:px-8">
           <div>
             <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">

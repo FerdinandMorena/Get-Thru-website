@@ -56,6 +56,7 @@ export default function ContactPage() {
         crumb="Home / Contact & support"
         description="Contact Get Thru about internet packages, coverage, business solutions, digital skills or general support."
         eyebrow="We're here to help"
+        visual="contact"
         title={
           <>
             How can we help
@@ -64,7 +65,7 @@ export default function ContactPage() {
           </>
         }
       />
-      <section className="py-14 sm:py-16 lg:py-20">
+      <section className="site-grid-bg py-14 sm:py-16 lg:py-20">
         <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-start gap-8 px-5 sm:px-7 lg:grid-cols-[.85fr_1.15fr] lg:gap-14 lg:px-8">
           <div className="grid gap-4">
             <ContentCard icon="◉">
@@ -104,7 +105,7 @@ export default function ContactPage() {
           />
         </div>
       </section>
-      <section className="bg-gradient-to-br from-slate-50 to-blue-50/60 py-14 sm:py-16 lg:py-20">
+      <section className="site-grid-bg py-14 sm:py-16 lg:py-20">
         <div className="mx-auto w-full max-w-7xl px-5 sm:px-7 lg:px-8">
           <h2 className="mb-5 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
             Frequently asked questions

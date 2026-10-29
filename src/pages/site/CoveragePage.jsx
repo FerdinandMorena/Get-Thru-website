@@ -40,6 +40,7 @@ export default function CoveragePage() {
         crumb="Home / Coverage & availability"
         description="Coverage depends on location and network feasibility. Share your address and preferred service so our team can assess availability and follow up."
         eyebrow="Check before you order"
+        visual="coverage"
         title={
           <>
             Is Get Thru available
@@ -48,7 +49,7 @@ export default function CoveragePage() {
           </>
         }
       />
-      <section className="py-14 sm:py-16 lg:py-20">
+      <section className="site-grid-bg py-14 sm:py-16 lg:py-20">
         <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-start gap-8 px-5 sm:px-7 lg:grid-cols-[.85fr_1.15fr] lg:gap-14 lg:px-8">
           <div>
             <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">

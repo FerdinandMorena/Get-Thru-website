@@ -69,9 +69,10 @@ export default function LearnPage({ navigate }) {
         description="Digital skills can help people use technology confidently, access information and prepare for new opportunities. Register interest to hear about future intakes."
         eyebrow="02 · Learn"
         navigate={navigate}
+        visual="learn"
         title={<>Build skills.<br /><em className="not-italic text-blue-700">Grow your future.</em></>}
       />
-      <section className="py-14 sm:py-16 lg:py-20">
+      <section className="site-grid-bg py-14 sm:py-16 lg:py-20">
         <div className="mx-auto w-full max-w-7xl px-5 sm:px-7 lg:px-8">
           <div className="mb-8 max-w-3xl">
             <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -124,7 +125,7 @@ export default function LearnPage({ navigate }) {
         </div>
       </section>
       <section
-        className="scroll-mt-24 bg-gradient-to-br from-slate-50 to-blue-50/60 py-14 sm:py-16 lg:py-20"
+        className="site-grid-bg scroll-mt-24 py-14 sm:py-16 lg:py-20"
         id="learning-form"
       >
         <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-start gap-8 px-5 sm:px-7 lg:grid-cols-[.85fr_1.15fr] lg:gap-14 lg:px-8">
@@ -145,7 +146,7 @@ export default function LearnPage({ navigate }) {
           />
         </div>
       </section>
-      <section className="py-14 sm:py-16 lg:py-20">
+      <section className="site-grid-bg py-14 sm:py-16 lg:py-20">
         <div className="mx-auto w-full max-w-7xl px-5 sm:px-7 lg:px-8">
           <div className="mb-8 max-w-3xl">
             <div className="text-xs font-extrabold uppercase tracking-widest text-blue-700">

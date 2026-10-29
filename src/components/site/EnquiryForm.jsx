@@ -22,7 +22,7 @@ export default function EnquiryForm({ title, name, fields, button }) {
 
   return (
     <form
-      className="min-w-0 rounded-3xl border border-slate-200 bg-white p-5 shadow-[0_16px_42px_rgba(16,42,67,0.08)] sm:p-7 lg:p-8"
+      className="site-panel min-w-0 rounded-3xl p-5 sm:p-7 lg:p-8"
       data-name={name}
       onSubmit={submit}
     >

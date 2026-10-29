@@ -6,7 +6,7 @@ export default function Footer({ navigate }) {
     "text-sm text-slate-300 transition hover:text-white hover:underline";
 
   return (
-    <footer className="mt-12 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 text-white sm:py-16">
+    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 text-white sm:py-16">
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-7 lg:px-8">
         <div className="grid grid-cols-1 gap-9 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:gap-10">
           <div>

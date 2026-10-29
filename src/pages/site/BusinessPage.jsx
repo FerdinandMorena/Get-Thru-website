@@ -71,9 +71,10 @@ export default function BusinessPage({ navigate }) {
         description="Tell us what your business needs. Enquire about connectivity and explore technology-enabled business solutions."
         eyebrow="Connect your business"
         navigate={navigate}
+        visual="business"
         title={<>Connectivity and digital tools<br /><em className="not-italic text-blue-700">for business growth.</em></>}
       />
-      <section className="py-14 sm:py-16 lg:py-20">
+      <section className="site-grid-bg py-14 sm:py-16 lg:py-20">
         <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-5 px-5 sm:px-7 md:grid-cols-3 lg:px-8">
           {businessServices.map(([icon, title, copy, link, to], index) => (
             <ContentCard accent={index % 2 === 1} icon={icon} key={title}>
@@ -91,7 +92,7 @@ export default function BusinessPage({ navigate }) {
         </div>
       </section>
       <section
-        className="scroll-mt-24 bg-gradient-to-br from-slate-50 to-blue-50/60 py-14 sm:py-16 lg:py-20"
+        className="site-grid-bg scroll-mt-24 py-14 sm:py-16 lg:py-20"
         id="business-form"
       >
         <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-start gap-8 px-5 sm:px-7 lg:grid-cols-[.85fr_1.15fr] lg:gap-14 lg:px-8">
