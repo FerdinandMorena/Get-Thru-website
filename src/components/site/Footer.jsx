@@ -89,9 +89,7 @@ export default function Footer({ navigate }) {
               <a className={linkClass} href="mailto:info@getthru.co.za">
                 info@getthru.co.za
               </a>
-              <a className={linkClass} href="https://getthru.co.za">
-                www.getthru.co.za
-              </a>
+
               <a
                 className={linkClass}
                 href={pagePath("contact")}
